@@ -7,6 +7,8 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
+![StitchCV Preview](preview.png)
+
 ## Overview
 
 **StitchCV** is a modern web portfolio featuring a **Mobile-First** approach and a polished visual identity based on **Material Design 3** principles.
@@ -50,7 +52,7 @@ Then open: http://localhost:8000
 StitchCV/
 ├── index.html              # French version
 ├── index-en.html           # English version
-├── CV_DAVY_GNANAVELAN.pdf  # Downloadable PDF version
+├── CV_Davy_Gnanavelan_Pigiste.pdf  # Downloadable PDF version
 ├── logo_entreprise/        # Company logos
 │   ├── banquenationale.png
 │   ├── bforbank.png
