@@ -52,7 +52,8 @@ Then open: http://localhost:8000
 StitchCV/
 ├── index.html              # French version
 ├── index-en.html           # English version
-├── CV_Davy_Gnanavelan_Pigiste.pdf  # Downloadable PDF version
+├── CV_Davy_Gnanavelan_Pigiste.pdf           # French PDF version
+├── CV_Davy_Gnanavelan_Freelancer_English.pdf  # English PDF version
 ├── logo_entreprise/        # Company logos
 │   ├── banquenationale.png
 │   ├── bforbank.png
