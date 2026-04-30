@@ -1,0 +1,2075 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DAVY_GNANAVELAN | Business & Functional Analyst</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c6c5d4",
+                        "error": "#ba1a1a",
+                        "success": "#4caf50",
+                        "primary": "#1A237E",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary-fixed": "#ffdbd0",
+                        "on-surface": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#5c1800",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#000767",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "on-surface-variant": "#454652",
+                        "surface-dim": "#d9dadb",
+                        "on-secondary-fixed-variant": "#354a53",
+                        "on-secondary-fixed": "#071e27",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-tint": "#1A237E",
+                        "surface": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#7b2e12",
+                        "primary-container": "#1a237e",
+                        "surface-bright": "#f8f9fa",
+                        "primary-fixed": "#e0e0ff",
+                        "outline": "#767683",
+                        "surface-container": "#edeeef",
+                        "surface-variant": "#e1e3e4",
+                        "secondary-container": "#cfe6f2",
+                        "inverse-surface": "#2e3132",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#380b00",
+                        "on-tertiary-fixed": "#390c00",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#b4cad6",
+                        "tertiary-fixed-dim": "#ffb59d",
+                        "background": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#343d96",
+                        "on-background": "#191c1d",
+                        "secondary-fixed": "#cfe6f2",
+                        "on-tertiary-container": "#e17c5a",
+                        "on-primary-container": "#8690ee",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#526772",
+                        "inverse-primary": "#bdc2ff",
+                        "surface-container-high": "#e7e8e9",
+                        "secondary": "#4c616c",
+                        /* Dark mode specific tokens */
+                        "dark-surface": "#121316",
+                        "dark-surface-container": "#1e2022",
+                        "dark-surface-container-low": "#1a1c1e",
+                        "dark-surface-container-high": "#272a2c",
+                        "dark-surface-card": "#1e2022",
+                        "dark-on-surface": "#e2e2e5",
+                        "dark-on-surface-variant": "#c6c5d4",
+                        "dark-primary": "#bdc2ff",
+                        "dark-primary-container": "#343d96",
+                        "dark-on-primary": "#0d1566",
+                        "dark-primary-fixed": "#2a3388"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .blueprint-grid {
+            background-image: radial-gradient(circle, #767683 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.05;
+        }
+
+        .parallax-section {
+            transform-style: preserve-3d;
+        }
+
+        /* Dark mode transition */
+        html,
+        body,
+        nav,
+        main,
+        section,
+        div,
+        footer,
+        a,
+        button,
+        span,
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        ul,
+        li {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Icon Interactive Animations */
+        @keyframes icon-interact {
+            0% {
+                transform: scale(1) rotate(0deg);
+            }
+
+            30% {
+                transform: scale(0.7) rotate(-15deg);
+            }
+
+            60% {
+                transform: scale(1.1) rotate(10deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(0deg);
+            }
+        }
+
+        .icon-animating .material-symbols-outlined,
+        .icon-animating svg {
+            animation: icon-interact 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important;
+        }
+
+        /* Print styles */
+        @media print {
+
+            nav,
+            #chatbot-container,
+            #contact-modal,
+            .no-print,
+            button:not(.print-only),
+            .blueprint-grid {
+                display: none !important;
+            }
+
+            body {
+                background: white !important;
+                color: black !important;
+                padding-top: 0 !important;
+            }
+
+            main {
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+
+            .parallax-section {
+                transform: none !important;
+                min-height: auto !important;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+        }
+
+        .perspective-container {
+            perspective: 1200px;
+        }
+
+        .experience-card {
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-8px) rotateX(2deg) rotateY(-1deg);
+            box-shadow: 0 25px 50px -12px rgba(26, 35, 126, 0.15);
+        }
+
+        .logo-lift {
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform: translateZ(20px);
+        }
+
+        .experience-card:hover .logo-lift {
+            transform: translateZ(40px) scale(1.05);
+        }
+
+        .inner-content-3d {
+            transform: translateZ(10px);
+        }
+
+        .blueprint-line {
+            position: relative;
+        }
+
+        .blueprint-line::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e0e0ff;
+        }
+
+        /* New Tech Environment Styles */
+        .env-block {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(198, 197, 212, 0.2);
+        }
+
+        .env-label {
+            display: block;
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #767683;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+
+        .dark .env-label {
+            color: #c6c5d4;
+        }
+
+        .dark .text-outline {
+            color: #c6c5d4;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            padding: 0.375rem 0.75rem;
+            border-radius: 9999px;
+            background-color: rgba(26, 35, 126, 0.05);
+            color: #1A237E;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border: 1px solid rgba(26, 35, 126, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .dark .tag {
+            background-color: rgba(189, 194, 255, 0.1);
+            color: #bdc2ff;
+            border-color: rgba(189, 194, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-surface dark:bg-dark-surface font-body text-on-surface dark:text-dark-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed-variant overflow-x-hidden">
+    <!-- Top Navigation Shell -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-white/95 dark:bg-[#1b1b1f]/95 backdrop-blur-md border-b border-outline-variant/10 dark:border-white/10">
+        <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl mx-auto w-full">
+            <div class="flex items-center justify-between w-full relative">
+                <div class="text-xl font-bold tracking-tighter text-primary dark:text-dark-primary font-headline z-10">
+                    DAVY GNANAVELAN
+                </div>
+                <div class="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none">
+                    <div class="flex items-center space-x-8 pointer-events-auto">
+                        <a class="text-sm font-bold font-headline tracking-tight text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors duration-300"
+                            href="#profil">Profile</a>
+                        <a class="text-sm font-bold font-headline tracking-tight text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors duration-300"
+                            href="#experience">Experience</a>
+                        <a class="text-sm font-bold font-headline tracking-tight text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors duration-300"
+                            href="#education">Education</a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4 z-10">
+                    <button aria-label="Toggle dark mode"
+                        class="p-2 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors rounded-lg hover:bg-surface-container-low dark:hover:bg-dark-surface-container-low flex items-center justify-center"
+                        id="dark-mode-toggle"><span
+                            class="material-symbols-outlined align-middle">light_mode</span></button>
+                    <!-- Translation Button -->
+                    <a href="index.html" aria-label="Switch to French" id="translate-toggle"
+                        class="p-2 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors rounded-lg hover:bg-surface-container-low dark:hover:bg-dark-surface-container-low flex items-center justify-center"
+                        title="Switch to French">
+                        <span class="material-symbols-outlined align-middle" style="font-size: 20px;">translate</span>
+                    </a>
+                    <!-- LinkedIn Button -->
+                    <a href="https://www.linkedin.com/in/gnanavelandavy" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn" id="linkedin-link"
+                        class="p-2 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors rounded-lg hover:bg-surface-container-low dark:hover:bg-dark-surface-container-low flex items-center justify-center"
+                        title="LinkedIn">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                        </svg>
+                    </a>
+                    <!-- GitHub Button -->
+                    <a href="https://github.com/daav-23" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+                        id="github-link"
+                        class="p-2 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors rounded-lg hover:bg-surface-container-low dark:hover:bg-dark-surface-container-low flex items-center justify-center"
+                        title="GitHub">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                        </svg>
+                    </a>
+                    <button aria-label="Contact"
+                        class="p-2 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors rounded-lg hover:bg-surface-container-low dark:hover:bg-dark-surface-container-low flex items-center justify-center"
+                        id="open-contact-modal">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" class="align-middle"><path d="M80-120q-33 0-56.5-23.5T0-200v-560q0-33 23.5-56.5T80-840h800q33 0 56.5 23.5T960-760v560q0 33-23.5 56.5T880-120H80Zm556-80h244v-560H80v560h4q42-75 116-117.5T360-360q86 0 160 42.5T636-200ZM445-435q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm315 195 80-80-60-80h-66q-6-18-10-38.5t-4-41.5q0-21 4-40.5t10-39.5h66l60-80-80-80q-54 42-87 106.5T640-480q0 69 33 133.5T760-240Zm-578 40h356q-34-38-80.5-59T360-280q-51 0-97 21t-81 59Zm149.5-291.5Q320-503 320-520t11.5-28.5Q343-560 360-560t28.5 11.5Q400-537 400-520t-11.5 28.5Q377-480 360-480t-28.5-11.5ZM480-480Z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </nav>
+    <main class="pt-24 pb-20 max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+        <!-- Hero Section -->
+        <section id="profil" class="relative min-h-0 flex flex-col justify-center mb-10 parallax-section">
+            <div class="absolute inset-0 blueprint-grid -z-10"></div>
+            <div class="w-full flex flex-col items-center text-center space-y-3">
+                <!-- Creative Experience Badge -->
+                <div class="relative mb-4">
+                    <div
+                        class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-surface-container-lowest dark:bg-dark-surface-container border border-outline-variant/20 dark:border-white/15 shadow-sm">
+                        <span class="flex h-2 w-2 rounded-full bg-primary dark:bg-dark-primary animate-pulse"></span>
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-widest text-primary dark:text-dark-primary">11
+                            Years of IT Experience</span>
+                    </div>
+                </div>
+                <h1
+                    class="font-headline text-6xl md:text-7xl font-extrabold tracking-tighter text-primary dark:text-dark-primary leading-tight max-w-4xl">
+                    Business & <span class="relative inline-block">
+                        <span class="relative z-10 text-on-surface dark:text-dark-on-surface">Functional Analyst</span>
+                        <span
+                            class="absolute bottom-1 left-0 w-full h-3 bg-primary-fixed/40 dark:bg-dark-primary-container/40 -z-10"></span>
+                    </span>.
+                </h1>
+                <p
+                    class="max-w-2xl text-lg text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed font-medium mx-auto">
+                    Freelance Business & Functional Analyst · 11 years of experience in IT (banking, insurance, online brokerage). Specialized in Web and Mobile digital transformation, I cover the full spectrum from requirements analysis to detailed design — process modelling, business rules, functional specifications — ensuring constant alignment between technical teams and stakeholders, from scoping to delivery.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 pt-4">
+                    <a class="bg-surface-container-lowest dark:bg-dark-surface-container text-primary dark:text-dark-primary border border-outline-variant/20 dark:border-white/15 px-8 py-4 rounded-lg flex items-center space-x-3 font-semibold hover:shadow-md transition-all active:scale-95 text-sm"
+                        href="https://www.linkedin.com/in/gnanavelandavy" target="_blank" rel="noopener noreferrer">
+                        <span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+                        <span>LinkedIn Profile</span>
+                    </a>
+                    <a class="bg-primary dark:bg-dark-primary text-on-primary dark:text-dark-on-primary px-8 py-4 rounded-lg flex items-center space-x-3 font-semibold shadow-md hover:-translate-y-0.5 transition-all active:scale-95 text-sm"
+                        href="javascript:window.print()">
+                        <span class="material-symbols-outlined text-lg">download</span>
+                        <span>Download resume</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Competencies -->
+        <section class="mb-16">
+            <div class="flex items-center space-x-6 mb-6">
+                <h2 class="font-headline text-3xl font-bold text-primary dark:text-dark-primary">Core Competencies
+                </h2>
+                <div class="h-[1px] flex-grow bg-outline-variant/30 dark:bg-white/15"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <!-- Analyse & cadrage -->
+                <div
+                    class="bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10 hover:shadow-md transition-shadow group flex flex-col h-full">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-primary-fixed dark:bg-dark-primary-fixed flex items-center justify-center text-primary dark:text-dark-primary mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                        <span class="material-symbols-outlined" data-icon="assignment"
+                            style='font-variation-settings: "FILL" 0, "wght" 100, "GRAD" 0, "opsz" 24;'>description</span>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-primary dark:text-dark-primary mb-4">Requirements Analysis &amp;
+                        Elicitation
+                    </h3>
+                    <ul
+                        class="space-y-3 text-sm text-on-surface-variant dark:text-dark-on-surface-variant font-medium flex-grow">
+                        <li class="flex items-start gap-2"><span
+                                class="text-primary dark:text-dark-primary text-[8px] mt-[5px]">•</span> Spearheaded business workshops and requirements elicitation sessions</li>
+                        <li class="flex items-start gap-2"><span
+                                class="text-primary dark:text-dark-primary text-[8px] mt-[5px]">•</span> Orchestrated comprehensive as-is analysis</li>
+                        <li class="flex items-start gap-2"><span
+                                class="text-primary dark:text-dark-primary text-[8px] mt-[5px]">•</span> Engineered business requirements into actionable functional specifications</li>
+                        <li class="flex items-start gap-2"><span
+                                class="text-primary dark:text-dark-primary text-[8px] mt-[5px]">•</span> Mitigated risks through impact assessment and contingency planning</li>
+                    </ul>
+                </div>
+                <!-- Design & Specification -->
+                <div
+                    class="bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10 hover:shadow-md transition-shadow group flex flex-col h-full">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-primary-fixed dark:bg-dark-primary-fixed flex items-center justify-center text-primary dark:text-dark-primary mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                        <span class="material-symbols-outlined" data-icon="settings_suggest"
+                            style='font-variation-settings: "FILL" 0, "wght" 100, "GRAD" 0, "opsz" 24;'>handshake</span>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-primary dark:text-dark-primary mb-4">Solution Design &amp;
+                        Specification
+                    </h3>
+                    <ul
+                        class="space-y-3 text-sm text-on-surface-variant dark:text-dark-on-surface-variant font-medium flex-grow">
+                        <li class="flex items-start gap-2"><span
+                                class="text-primary dark:text-dark-primary text-[8px] mt-[5px]">•</span> Authored detailed functional specifications (FSD)</li>
+                        <li class="flex items-start gap-2"><span
+                                class="text-primary dark:text-dark-primary text-[8px] mt-[5px]">•</span> Drafted User Stories (US) for development teams</li>
+                        <li class="flex items-start gap-2"><span
+                                class="text-primary dark:text-dark-primary text-[8px] mt-[5px]">•</span> Modelled business processes using UML and BPMN</li>
+                        <li class="flex items-start gap-2"><span
+                                class="text-primary dark:text-dark-primary text-[8px] mt-[5px]">•</span> Designed user journeys, wireframes, and functional mock-ups</li>
+                    </ul>
+                </div>
+                <!-- QA & Support -->
+                <div
+                    class="bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10 hover:shadow-md transition-shadow group flex flex-col h-full">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-primary-fixed dark:bg-dark-primary-fixed flex items-center justify-center text-primary dark:text-dark-primary mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform">
+                        <span class="material-symbols-outlined" data-icon="psychology"
+                            style='font-variation-settings: "FILL" 0, "wght" 100, "GRAD" 0, "opsz" 24;'>psychology</span>
+                    </div>
+                    <h3 class="font-headline text-xl font-bold text-primary dark:text-dark-primary mb-4">Validation &amp;
+                        Quality Assurance
+                    </h3>
+                    <ul
+                        class="space-y-3 text-sm text-on-surface-variant dark:text-dark-on-surface-variant font-medium flex-grow">
+                        <li class="flex items-start gap-2"><span
+                                class="text-primary dark:text-dark-primary text-[8px] mt-[5px]">•</span> Authored and executed test scenarios (Cucumber-Gherkin)</li>
+                        <li class="flex items-start gap-2"><span
+                                class="text-primary dark:text-dark-primary text-[8px] mt-[5px]">•</span> Facilitated User Acceptance Testing (UAT) and end-user onboarding</li>
+                        <li class="flex items-start gap-2"><span
+                                class="text-primary dark:text-dark-primary text-[8px] mt-[5px]">•</span> Diagnosed defects and steered remediation through to closure</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+                <div class="lg:col-span-7 flex flex-col gap-5">
+                    <!-- Environnement Technique - Bloc Bleu -->
+                    <div
+                        class="bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10 relative overflow-hidden">
+                        <h3
+                            class="font-headline text-xl font-bold text-primary dark:text-dark-primary mb-5 flex items-center gap-3">
+                            <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+                            Technical Environment
+                        </h3>
+                        <div
+                            class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-on-surface dark:text-dark-on-surface">
+                            <!-- Analyse & specs -->
+                            <div
+                                class="flex flex-col items-start gap-3 p-2.5 bg-surface-container-lowest dark:bg-dark-surface-container border border-outline-variant/20 dark:border-white/10 rounded-xl transition-colors">
+                                <span
+                                    class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-[9px] font-bold rounded-full uppercase tracking-widest inline-block">Analysis
+                                    &amp; Specs</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Suite Atlassian</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Swagger</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">OpenAPI</span>
+                                        <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Visual studio code</span>
+                                        <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Antigravity</span>
+                                <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">GitHub</span>
+                                    </div>
+                            </div>
+                            <!-- Conception -->
+                            <div
+                                class="flex flex-col items-start gap-3 p-2.5 bg-surface-container-lowest dark:bg-dark-surface-container border border-outline-variant/20 dark:border-white/10 rounded-xl transition-colors">
+                                <span
+                                    class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-[9px] font-bold rounded-full uppercase tracking-widest inline-block">Wireframing
+                                    &amp; Modelling</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Figma</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Balsamiq</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Axure</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Draw.io</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Visio</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Enterprise
+                                        Architect</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Suite
+                                        Adobe</span>
+                                </div>
+                            </div>
+                            <!-- Tests & bugs-->
+                            <div
+                                class="flex flex-col items-start gap-3 p-2.5 bg-surface-container-lowest dark:bg-dark-surface-container border border-outline-variant/20 dark:border-white/10 rounded-xl transition-colors">
+                                <span
+                                    class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-[9px] font-bold rounded-full uppercase tracking-widest inline-block">Testing
+                                    &amp; Defect Tracking</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">JIRA
+                                        Xray</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">TestFlight</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">BrowserStack</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Postman</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">SoapUI</span>
+                                </div>
+                            </div>
+
+                            <!-- Technique -->
+                            <div
+                                class="flex flex-col items-start gap-3 p-2.5 bg-surface-container-lowest dark:bg-dark-surface-container border border-outline-variant/20 dark:border-white/10 rounded-xl transition-colors">
+                                <span
+                                    class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-[9px] font-bold rounded-full uppercase tracking-widest inline-block">Platforms
+                                    &amp; Languages</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Android</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">iOS</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">React</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Angular</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">JavaScript</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Java</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">.NET</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">HTML
+                                        / CSS</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">XML
+                                        / JSON</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">MySQL</span>
+                                </div>
+                            </div>
+
+                            <!-- CMS -->
+                            <div
+                                class="flex flex-col items-start gap-3 p-2.5 bg-surface-container-lowest dark:bg-dark-surface-container border border-outline-variant/20 dark:border-white/10 rounded-xl transition-colors">
+                                <span
+                                    class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-[9px] font-bold rounded-full uppercase tracking-widest inline-block">CMS</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">WordPress</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Shopify</span>
+                                </div>
+                            </div>
+
+                            <!-- Analytics -->
+                            <div
+                                class="flex flex-col items-start gap-3 p-2.5 bg-surface-container-lowest dark:bg-dark-surface-container border border-outline-variant/20 dark:border-white/10 rounded-xl transition-colors">
+                                <span
+                                    class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-[9px] font-bold rounded-full uppercase tracking-widest inline-block">Analytics</span>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Google
+                                        Analytics</span>
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-[10px] font-semibold text-primary dark:text-dark-primary">Google
+                                        Ads</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- IA & Analyse Fonctionnelle -->
+                        <div class="space-y-3">
+                           <div>
+                                <h3 class="font-headline text-xl font-bold text-primary dark:text-dark-primary mb-2">AI &amp;
+                                    Functional Analysis
+                                    <span
+                                        class="px-2.5 py-1 bg-primary/5 border border-primary/20 dark:bg-dark-primary/10 dark:border-dark-primary/20 text-primary dark:text-dark-primary text-[9px] font-bold rounded-full uppercase tracking-widest">Active Self-Study</span>
+                                        </h3>
+                                <p
+                                    class="text-on-surface-variant dark:text-dark-on-surface-variant text-sm leading-relaxed font-medium">
+                                    Leveraging AI to structure deliverables, accelerate analysis, and free up time for strategic decision-making. (Claude, Kimi, Copilot, etc.)
+                                </p>
+                            </div>
+                            <!-- 3 cartes -->
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <!-- Authoring -->
+                                <div
+                                    class="bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl border border-outline-variant/10 dark:border-white/10">
+                                    <span
+                                        class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-[9px] font-bold rounded-full uppercase tracking-widest mb-3 inline-block">Technical Writing</span>
+                                    <h4 class="text-sm font-bold text-on-surface dark:text-dark-on-surface mb-2">AI-Assisted
+                                        Authoring</h4>
+                                    <p
+                                        class="text-xs text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed font-medium">
+                                        Delivered AI-assisted User Stories, specifications, and acceptance criteria with business oversight.</p>
+                                </div>
+                                <!-- Modelling -->
+                                <div
+                                    class="bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl border border-outline-variant/10 dark:border-white/10">
+                                    <span
+                                        class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-[9px] font-bold rounded-full uppercase tracking-widest mb-3 inline-block">Modelling</span>
+                                    <h4 class="text-sm font-bold text-on-surface dark:text-dark-on-surface mb-2">Flow Modelling</h4>
+                                        <p
+                                        class="text-xs text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed font-medium">
+                                        Transformed narrative descriptions into activity and sequence diagrams (UML/BPMN).</p>
+                                </div>
+                                <!-- Elicitation -->
+                                <div
+                                    class="bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl border border-outline-variant/10 dark:border-white/10">
+                                    <span
+                                        class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 text-[9px] font-bold rounded-full uppercase tracking-widest mb-3 inline-block">Elicitation</span>
+                                    <h4 class="text-sm font-bold text-on-surface dark:text-dark-on-surface mb-2">Document
+                                        Analysis</h4>
+                                    <p
+                                        class="text-xs text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed font-medium">
+                                        Extracted actionable requirements from complex documentary sources.</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="lg:col-span-5 flex flex-col gap-5">
+                        <!-- Soft Skills -->
+                        <div
+                            class="bg-surface-container-lowest dark:bg-dark-surface-container p-6 rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10">
+                            <h3 class="font-headline text-xl font-bold text-primary dark:text-dark-primary mb-6">Soft
+                                Skills
+                            </h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Adaptability</span>
+                                <span
+                                    class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Analytical Thinking &amp; Initiative</span>
+                                <span
+                                    class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Collaboration</span>
+                                <span
+                                    class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Continuous Learning</span>
+                            </div>
+                        </div>
+                        <!-- Project Methodology -->
+                        <div
+                            class="bg-surface-container-lowest dark:bg-dark-surface-container p-6 rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10">
+                            <h3 class="font-headline text-xl font-bold text-primary dark:text-dark-primary mb-6">
+                                Project Methodologies
+                            </h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Scrum</span>
+                                <span
+                                    class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Kanban</span>
+                                <span
+                                    class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">V-Model</span>
+                            </div>
+                        </div>
+                        <!-- Langues -->
+                        <div
+                            class="bg-surface-container-lowest dark:bg-dark-surface-container p-6 rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10">
+                            <h3 class="font-headline text-xl font-bold text-primary dark:text-dark-primary mb-6">Languages
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex flex-wrap gap-3">
+                                    <div
+                                        class="flex items-center space-x-2 px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full">
+                                        <span
+                                            class="text-xs font-bold text-primary dark:text-dark-primary">French</span>
+                                        <span class="w-1 h-1 bg-primary/30 dark:bg-dark-primary/30 rounded-full"></span>
+                                        <span
+                                            class="text-[10px] font-medium uppercase tracking-wider text-on-surface-variant dark:text-dark-on-surface-variant">Native</span>
+                                    </div>
+                                    <div
+                                        class="flex items-center space-x-2 px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full">
+                                        <span
+                                            class="text-xs font-bold text-primary dark:text-dark-primary">English</span>
+                                        <span class="w-1 h-1 bg-primary/30 dark:bg-dark-primary/30 rounded-full"></span>
+                                        <span
+                                            class="text-[10px] font-medium uppercase tracking-wider text-on-surface-variant dark:text-dark-on-surface-variant">B2 Level</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section id="experience" class="mb-16">
+            <div class="flex items-center space-x-6 mb-6">
+                <h2 class="font-headline text-3xl font-bold text-primary dark:text-dark-primary">Professional
+                    Experience</h2>
+                <div class="h-[1px] flex-grow bg-outline-variant/30 dark:bg-white/15"></div>
+            </div>
+            <p class="text-on-surface-variant dark:text-dark-on-surface-variant text-lg text-left font-medium mb-6">
+                8+ years of experience in web and mobile functional analysis in an agile environment.
+
+            </p>
+
+            <div class="grid grid-cols-1 gap-6">
+                <section class="space-y-16 perspective-container">
+                    <!-- Role: Desjardins 2025 -->
+                    <div class="blueprint-line">
+                        <div
+                            class="experience-card bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_-15px_rgba(26,35,126,0.2)]">
+                            <div
+                                class="inner-content-3d flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
+                                <div class="flex items-center gap-6">
+                                    <div class="logo-lift bg-white p-2 rounded-lg shadow-md">
+                                        <img alt="Desjardins" class="h-12 w-12 object-contain"
+                                            src="logo_entreprise/desjardins.png" />
+                                    </div>
+                                    <div>
+                                        <h2
+                                            class="font-headline text-2xl font-bold text-on-surface dark:text-dark-on-surface tracking-tight">
+                                            Business &amp; Functional Analyst (Freelance Consultant) </h2>
+                                        <p class="text-primary dark:text-dark-primary font-bold text-lg"> Velan
+                                            Solutions Conseil Numérique Inc. (Desjardins Contract), Montreal, QC
+                                        </p>
+                                        <div class="flex flex-wrap gap-x-4">
+                                            <a class="text-xs text-outline hover:text-primary flex items-center gap-1 mt-1 transition-colors"
+                                                href="https://www.disnat.com/" target="_blank"
+                                                rel="noopener noreferrer"><span
+                                                    class="material-symbols-outlined text-[14px]">link</span>www.disnat.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-surface-container-high dark:bg-dark-surface-container-high text-on-surface-variant dark:text-dark-on-surface-variant px-4 py-1 rounded-full text-sm font-bold shadow-sm">
+                                    July 2025 — April 2026
+                                </div>
+                            </div>
+                            <div class="inner-content-3d grid md:grid-cols-2 gap-5 mt-4">
+                                <div class="space-y-4">
+                                    <h4 class="font-headline text-xs font-bold uppercase tracking-wider text-outline">
+                                        Key Contributions</h4>
+                                    <ul class="space-y-3">
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Spearheaded business requirements analysis and documentation, authoring tailored
+                                                functional requirements and recommendations, with Gherkin acceptance criteria.</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Orchestrated the creation and maintenance of API service contracts with technical
+                                                teams.</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Authored and executed functional test cases.</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Partnered with the Product Owner on product design and stakeholder requirements
+                                                elicitation (UX, UI, Marketing...)</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Coached developers through solution implementation and technical feasibility.</span>
+                                        </li>
+                                    </ul>
+                                    <div class="env-block">
+                                        <div class="env-label">Technical Environment</div>
+                                        <div class="tags">
+                                            <span class="tag">React</span>
+                                            <span class="tag">Angular</span>
+                                            <span class="tag">Kotlin</span>
+                                            <span class="tag">Swift</span>
+                                            <span class="tag">OpenAPI</span>
+                                            <span class="tag">Java</span>
+                                            <span class="tag">SQL</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span
+                                            class="px-2 py-0.5 bg-primary dark:bg-dark-primary text-on-primary dark:text-dark-on-primary text-[10px] font-bold rounded uppercase tracking-tighter">Highlights</span>
+                                    </div>
+                                    <div
+                                        class="bg-primary/5 dark:bg-dark-primary/10 p-6 rounded-lg border-l-4 border-primary dark:border-dark-primary shadow-inner">
+                                        <p
+                                            class="text-sm font-bold text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed">
+                                            Within the Online Brokerage and Brokerage Operations directorate, I joined a 20+ person team
+                                            dedicated to optimizing Disnat's web and mobile journeys. I spearheaded the end-to-end
+                                            analysis and design of the mutual fund transaction flow on iOS and Android mobile apps
+                                            — from category-based search to trade execution (buy/sell), including API interface
+                                            documentation with back-end systems.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Role: Levio/Hydro-Quebec -->
+                    <div class="blueprint-line">
+                        <div
+                            class="experience-card bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)]">
+                            <div
+                                class="inner-content-3d flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
+                                <div class="flex items-center gap-6">
+                                    <div class="logo-lift bg-white p-2 rounded-lg shadow-md">
+                                        <img alt="Hydro Québec" class="h-12 w-12 object-contain"
+                                            src="logo_entreprise/hydroquebec.png" />
+                                    </div>
+                                    <div>
+                                        <h2
+                                            class="font-headline text-2xl font-bold text-on-surface dark:text-dark-on-surface tracking-tight">
+                                            Business &amp; Functional Analyst (Consultant)</h2>
+                                        <p class="text-primary dark:text-dark-primary font-bold text-lg">Levio Conseil
+                                            Inc. (Hydro-Québec Contract), Montreal, QC</p>
+                                        <a class="text-xs text-outline hover:text-primary flex items-center gap-1 mt-1 transition-colors"
+                                            href="https://www.hydroquebec.com" target="_blank"
+                                            rel="noopener noreferrer"><span
+                                                class="material-symbols-outlined text-[14px]">link</span>www.hydroquebec.com</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-surface-container-high dark:bg-dark-surface-container-high text-on-surface-variant dark:text-dark-on-surface-variant px-4 py-1 rounded-full text-sm font-bold shadow-sm">
+                                    March 2023 — July 2025
+                                </div>
+                            </div>
+                            <div class="inner-content-3d grid md:grid-cols-2 gap-5 mt-4">
+                                <div class="space-y-4">
+                                    <h4 class="font-headline text-xs font-bold uppercase tracking-wider text-outline">
+                                        Key Contributions</h4>
+                                    <ul class="space-y-3">
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Analyzed and documented existing system functionalities.</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Modelled activity and sequence diagrams for payment transaction flows.</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Authored and executed functional test cases in Jira X-Ray (Gherkin/Cucumber).</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Collaborated with the Solution Architect and contributed to strategic recommendations.</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Identified anomalies and tracked proposed fixes through to resolution.</span>
+                                        </li>
+                                    </ul>
+                                    <div class="env-block">
+                                        <div class="env-label">Technical Environment</div>
+                                        <div class="tags">
+                                            <span class="tag">.Net</span>
+                                            <span class="tag">Control-M</span>
+                                            <span class="tag">AWS</span>
+                                            <span class="tag">SQL</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span
+                                            class="px-2 py-0.5 bg-primary dark:bg-dark-primary text-on-primary dark:text-dark-on-primary text-[10px] font-bold rounded uppercase tracking-tighter">Highlights</span>
+                                    </div>
+                                    <div
+                                        class="bg-primary/5 dark:bg-dark-primary/10 p-6 rounded-lg border-l-4 border-primary dark:border-dark-primary shadow-inner">
+                                        <p
+                                            class="text-sm font-bold text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed">
+                                            Within the Corporate Products and Customer Services directorate, I joined a 10-person team for
+                                            the technology migration of the fund management application (replacing BizTalk with AWS).
+                                            I analyzed and documented existing inbound and outbound payment transaction flows via
+                                            Control-M, and produced complete mapping through UML activity and sequence diagrams to
+                                            support the architectural transition. During delivery, I coordinated functional and
+                                            regression testing on the new AWS environment, ensuring flow compliance before production
+                                            deployment.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Role: National Bank -->
+                    <div class="blueprint-line">
+                        <div
+                            class="experience-card bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)]">
+                            <div
+                                class="inner-content-3d flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
+                                <div class="flex items-center gap-6">
+                                    <div class="logo-lift bg-white p-2 rounded-lg shadow-md">
+                                        <img alt="Banque Nationale" class="h-12 w-12 object-contain"
+                                            src="logo_entreprise/banquenationale.png" />
+                                    </div>
+                                    <div>
+                                        <h2
+                                            class="font-headline text-2xl font-bold text-on-surface dark:text-dark-on-surface tracking-tight">
+                                            Principal Functional Analyst</h2>
+                                        <p class="text-primary dark:text-dark-primary font-bold text-lg">National Bank of Canada, Montreal, QC</p>
+                                        <a class="text-xs text-outline hover:text-primary flex items-center gap-1 mt-1 transition-colors"
+                                            href="https://www.nbc.ca" target="_blank" rel="noopener noreferrer"><span
+                                                class="material-symbols-outlined text-[14px]">link</span>www.nbc.ca</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-surface-container-high dark:bg-dark-surface-container-high text-on-surface-variant dark:text-dark-on-surface-variant px-4 py-1 rounded-full text-sm font-bold shadow-sm">
+                                    March 2022 — January 2023
+                                </div>
+                            </div>
+                            <div class="inner-content-3d grid md:grid-cols-2 gap-5 mt-4">
+                                <div class="space-y-4">
+                                    <h4 class="font-headline text-xs font-bold uppercase tracking-wider text-outline">
+                                        Key Contributions</h4>
+                                    <ul class="space-y-3 mt-4">
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Led functional analysis of regulatory compliance and customer due diligence requirements.</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Authored functional specifications and contributed to Fen-X tool configuration.
+                                            </span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Partnered with business (Compliance, Legal) and technical teams (Developers, Architects)
+                                                to align regulatory requirements with platform capabilities.
+                                            </span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Engineered KYC/AML workflow integration into the SaaS interface.
+                                            </span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Documented functional test cases in Jira X-Ray (Gherkin/Cucumber) and validated test scenarios.
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="env-block">
+                                        <div class="env-label">Technical Environment</div>
+                                        <div class="tags">
+                                            <span class="tag">SaaS</span>
+                                            <span class="tag">Java</span>
+                                            <span class="tag">APIs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span
+                                            class="px-2 py-0.5 bg-primary dark:bg-dark-primary text-on-primary dark:text-dark-on-primary text-[10px] font-bold rounded uppercase tracking-tighter">Highlights</span>
+                                    </div>
+                                    <div
+                                        class="bg-primary/5 dark:bg-dark-primary/10 p-6 rounded-lg border-l-4 border-primary dark:border-dark-primary shadow-inner">
+                                        <p
+                                            class="text-sm font-bold text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed">
+                                            Within the IT Delivery - Cybercrime directorate, I joined a 10-person team tasked with
+                                            modernizing regulatory compliance solutions applied during client onboarding (KYC, AML,
+                                            CRS-FATCA). I contributed to the technology migration of compliance processes to Fen-X
+                                            (Fenergo), a SaaS platform dedicated to Client Lifecycle Management (CLM).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Role: Desjardins 2020-2022 -->
+                    <div class="blueprint-line">
+                        <div
+                            class="experience-card bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)]">
+                            <div
+                                class="inner-content-3d flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
+                                <div class="flex items-center gap-6">
+                                    <div class="logo-lift bg-white p-2 rounded-lg shadow-md">
+                                        <img alt="Desjardins" class="h-12 w-12 object-contain"
+                                            src="logo_entreprise/desjardins.png" />
+                                    </div>
+                                    <div>
+                                        <h2
+                                            class="font-headline text-2xl font-bold text-on-surface dark:text-dark-on-surface tracking-tight">
+                                            Business &amp; Functional Analyst</h2>
+                                        <p class="text-primary dark:text-dark-primary font-bold text-lg">Desjardins Technology Group, Lévis, QC</p>
+                                        <a class="text-xs text-outline hover:text-primary flex items-center gap-1 mt-1 transition-colors"
+                                            href="https://www.desjardins.com" target="_blank"
+                                            rel="noopener noreferrer"><span
+                                                class="material-symbols-outlined text-[14px]">link</span>www.desjardins.com</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-surface-container-high dark:bg-dark-surface-container-high text-on-surface-variant dark:text-dark-on-surface-variant px-4 py-1 rounded-full text-sm font-bold shadow-sm">
+                                    March 2020 — February 2022
+                                </div>
+                            </div>
+                            <div class="inner-content-3d grid md:grid-cols-2 gap-5 mt-4">
+                                <div class="space-y-4">
+                                    <h4 class="font-headline text-xs font-bold uppercase tracking-wider text-outline">
+                                        Key Contributions</h4>
+                                    <ul class="space-y-3">
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Analyzed business needs and translated them into clear, actionable functional requirements</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Produced detailed functional specifications and recommended fit-for-purpose solutions, including impact analysis</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Collaborated closely with architects, technical teams, and stakeholders to align solutions</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Designed and executed test strategies (functional, integration, regression) to ensure delivery quality</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Provided support to development teams and tracked defects through to resolution</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Communicated progress and ensured deliverable quality and documentation</span>
+                                        </li>
+                                    </ul>
+                                    <div class="env-block">
+                                        <div class="env-label">Technical Environment</div>
+                                        <div class="tags">
+                                            <span class="tag">Angular</span>
+                                            <span class="tag">React</span>
+                                            <span class="tag">Java</span>
+                                            <span class="tag">APIs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span
+                                            class="px-2 py-0.5 bg-primary dark:bg-dark-primary text-on-primary dark:text-dark-on-primary text-[10px] font-bold rounded uppercase tracking-tighter">Highlights</span>
+                                    </div>
+                                    <div
+                                        class="bg-primary/5 dark:bg-dark-primary/10 p-6 rounded-lg border-l-4 border-primary dark:border-dark-primary shadow-inner">
+                                        <p
+                                            class="text-sm font-bold text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed">
+                                            Within the Auto Solutions directorate (Desjardins General Insurance Group), I contributed to
+                                            a major web redesign program (UI and application) named AutoQc, an auto insurance
+                                            subscription solution, within a multidisciplinary team of 200+ collaborators.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Role: Orange Bank -->
+                    <div class="blueprint-line">
+                        <div
+                            class="experience-card bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)]">
+                            <div
+                                class="inner-content-3d flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
+                                <div class="flex items-center gap-6">
+                                    <div class="logo-lift bg-white p-2 rounded-lg shadow-md">
+                                        <img alt="Orange Bank" class="h-12 w-12 object-contain"
+                                            src="logo_entreprise/orangebank.jpg" />
+                                    </div>
+                                    <div>
+                                        <h2
+                                            class="font-headline text-2xl font-bold text-on-surface dark:text-dark-on-surface tracking-tight">
+                                            Business &amp; Functional Analyst (Consultant)</h2>
+                                        <p class="text-primary dark:text-dark-primary font-bold text-lg">Extia (Orange Bank Contract), France
+                                        </p>
+                                        <a class="text-xs text-outline hover:text-primary flex items-center gap-1 mt-1 transition-colors"
+                                            href="https://orangebank.ci/" target="_blank" rel="noopener noreferrer"><span
+                                                class="material-symbols-outlined text-[14px]">link</span>https://orangebank.ci/</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-surface-container-high dark:bg-dark-surface-container-high text-on-surface-variant dark:text-dark-on-surface-variant px-4 py-1 rounded-full text-sm font-bold shadow-sm">
+                                    March 2019 — January 2020
+                                </div>
+                            </div>
+                            <div class="inner-content-3d grid md:grid-cols-2 gap-5 mt-4">
+                                <div class="space-y-4">
+                                    <h4 class="font-headline text-xs font-bold uppercase tracking-wider text-outline">
+                                        Key Contributions</h4>
+                                    <ul class="space-y-3">
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Elicited and scoped requirements with the Product Owner and stakeholders (UX, Marketing, Back-Office, Compliance, Customer Relations)</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Contributed to solution design with functional and technical architecture teams</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Authored detailed functional specifications and acceptance criteria</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Supported development teams in implementation and technical constraint arbitration</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Designed and executed functional tests to ensure delivery quality</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Trained business users and facilitated solution adoption</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Identified risks, tracked progress, and provided regular reporting to steering committees</span>
+                                        </li>
+                                    </ul>
+                                    <div class="env-block">
+                                        <div class="env-label">Technical Environment</div>
+                                        <div class="tags">
+                                            <span class="tag">Angular</span>
+                                            <span class="tag">Java</span>
+                                            <span class="tag">React</span>
+                                            <span class="tag">APIs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span
+                                            class="px-2 py-0.5 bg-primary dark:bg-dark-primary text-on-primary dark:text-dark-on-primary text-[10px] font-bold rounded uppercase tracking-tighter">Highlights</span>
+                                    </div>
+                                    <div
+                                        class="bg-primary/5 dark:bg-dark-primary/10 p-6 rounded-lg border-l-4 border-primary dark:border-dark-primary shadow-inner">
+                                        <p
+                                            class="text-sm font-bold text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed">
+                                            Within the Information Systems directorate, I contributed to transforming the digital banking
+                                            subscription journey (self-care and boutique), as part of a web redesign, within a 10+ person
+                                            IT team.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Role: BforBank -->
+                    <div class="blueprint-line">
+                        <div
+                            class="experience-card bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)]">
+                            <div
+                                class="inner-content-3d flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
+                                <div class="flex items-center gap-6">
+                                    <div class="logo-lift bg-white p-2 rounded-lg shadow-md">
+                                        <img alt="Bforbank" class="h-12 w-12 object-contain"
+                                            src="logo_entreprise/bforbank.png" />
+                                    </div>
+                                    <div>
+                                        <h2
+                                            class="font-headline text-2xl font-bold text-on-surface dark:text-dark-on-surface tracking-tight">
+                                            Business &amp; Functional Analyst (Consultant)</h2>
+                                        <p class="text-primary dark:text-dark-primary font-bold text-lg">Extia (BforBank Contract), France
+                                        </p>
+                                        <a class="text-xs text-outline hover:text-primary flex items-center gap-1 mt-1 transition-colors"
+                                            href="https://www.bforbank.com" target="_blank" rel="noopener noreferrer"><span
+                                                class="material-symbols-outlined text-[14px]">link</span>https://www.bforbank.com/</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-surface-container-high dark:bg-dark-surface-container-high text-on-surface-variant dark:text-dark-on-surface-variant px-4 py-1 rounded-full text-sm font-bold shadow-sm">
+                                    March 2018 — January 2019
+                                </div>
+                            </div>
+                            <div class="inner-content-3d grid md:grid-cols-2 gap-5 mt-4">
+                                <div class="space-y-4">
+                                    <h4 class="font-headline text-xs font-bold uppercase tracking-wider text-outline">
+                                        Key Contributions</h4>
+                                    <ul class="space-y-3">
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Facilitated and coordinated agile ceremonies (sprint planning, estimation, demo, and retrospective)</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Coordinated with the Product Owner on US prioritization and backlog grooming for development teams</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Drafted User Stories and functional specifications</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Developed test cases and tracked testing for BforBank mobile applications</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Managed corrective maintenance, prioritizing tickets, testing, and defect validation</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Supported production deployments and app store releases on iOS and Android</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span>
+                                            <span>Directed external vendors (roadmap planning, functional enhancements, defect management)</span>
+                                        </li>
+                                    </ul>
+                                    <div class="env-block">
+                                        <div class="env-label">Technical Environment</div>
+                                        <div class="tags">
+                                            <span class="tag">Swift</span>
+                                            <span class="tag">Kotlin</span>
+                                            <span class="tag">Java</span>
+                                            <span class="tag">Spring Boot</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span
+                                            class="px-2 py-0.5 bg-primary dark:bg-dark-primary text-on-primary dark:text-dark-on-primary text-[10px] font-bold rounded uppercase tracking-tighter">Highlights</span>
+                                    </div>
+                                    <div
+                                        class="bg-primary/5 dark:bg-dark-primary/10 p-6 rounded-lg border-l-4 border-primary dark:border-dark-primary shadow-inner">
+                                        <p
+                                            class="text-sm font-bold text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed">
+                                            Within the Information Systems directorate, I contributed to RUN management (functional
+                                            enhancements, corrective maintenance) across the mobile banking scope of 4 apps: BforBank
+                                            Mobile, BforBank Brokerage, Mes Banques, Bcheck.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Role: Malakoff Humanis -->
+                    <div class="blueprint-line">
+                        <div
+                            class="experience-card bg-surface-container-lowest dark:bg-dark-surface-container p-5 rounded-xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.1)]">
+                            <div
+                                class="inner-content-3d flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
+                                <div class="flex items-center gap-6">
+                                    <div class="logo-lift bg-white p-2 rounded-lg shadow-md">
+                                        <img alt="Malakoff Humanis" class="h-12 w-12 object-contain"
+                                            src="logo_entreprise/malakoffhumanis.jpg" />
+                                    </div>
+                                    <div>
+                                        <h2
+                                            class="font-headline text-2xl font-bold text-on-surface dark:text-dark-on-surface tracking-tight">
+                                            Mobile Product Owner</h2>
+                                        <p class="text-primary dark:text-dark-primary font-bold text-lg">Malakoff Humanis (formerly Malakoff Mederic), France</p>
+                                        <a class="text-xs text-outline hover:text-primary flex items-center gap-1 mt-1 transition-colors"
+                                            href="https://www.malakoffhumanis.com"><span
+                                                class="material-symbols-outlined text-[14px]">link</span>www.malakoffhumanis.com</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="bg-surface-container-high dark:bg-dark-surface-container-high text-on-surface-variant dark:text-dark-on-surface-variant px-4 py-1 rounded-full text-sm font-bold shadow-sm">
+                                    September 2016 — September 2017
+                                </div>
+                            </div>
+                            <div class="inner-content-3d grid md:grid-cols-2 gap-5 mt-4">
+                                <div class="space-y-4">
+                                    <h4 class="font-headline text-xs font-bold uppercase tracking-wider text-outline">
+                                        Key Contributions</h4>
+                                    <ul class="space-y-3">
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Rédiger
+                                                les expressions de besoin et valider les spécifications
+                                                fonctionnelles.</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Créer
+                                                le prototypage et story-boarding des parcours clients.</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Gérer
+                                                la recette et les tests de non-régression des applications
+                                                mobiles.</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Piloter
+                                                les prestataires externes et respecter les délais de planning.</span>
+                                        </li>
+                                        <li
+                                            class="flex items-start gap-3 text-sm font-semibold text-on-surface-variant dark:text-dark-on-surface-variant">
+                                            <span
+                                                class="material-symbols-outlined text-primary dark:text-dark-primary text-lg">check_circle</span><span>Publication/Paramétrage
+                                                sur les stores Apple et Android.</span>
+                                        </li>
+                                    </ul>
+                                    <div class="env-block">
+                                        <div class="env-label">Technical Environment</div>
+                                        <div class="tags">
+                                            <span class="tag">Swift</span>
+                                            <span class="tag">Kotlin</span>
+                                            <span class="tag">Node.js</span>
+                                            <span class="tag">Java</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span
+                                            class="px-2 py-0.5 bg-primary dark:bg-dark-primary text-on-primary dark:text-dark-on-primary text-[10px] font-bold rounded uppercase tracking-tighter">Highlights</span>
+                                    </div>
+                                    <div
+                                        class="bg-primary/5 dark:bg-dark-primary/10 p-6 rounded-lg border-l-4 border-primary dark:border-dark-primary shadow-inner">
+                                        <p
+                                            class="text-sm font-bold text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed">
+                                            Within the Digital directorate, I contributed to product backlog management and the
+                                            implementation of functional enhancements for the TOUTM mobile app on iOS and Android
+                                            within an agile cycle.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Projets Personnels -->
+        <section id="projets" class="mb-16">
+            <div class="flex items-center space-x-6 mb-6">
+                <h2 class="font-headline text-3xl font-bold text-primary dark:text-dark-primary">Side Projects</h2>
+                <div class="h-[1px] flex-grow bg-outline-variant/30 dark:bg-white/15"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <!-- Projet 1 (Balyse) -->
+                <div
+                    class="p-5 bg-surface-container-lowest dark:bg-dark-surface-container rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10 hover:-translate-y-1 hover:shadow-md transition-all group">
+                    <div
+                        class="w-12 h-12 bg-primary-fixed dark:bg-dark-primary-fixed rounded-xl flex items-center justify-center text-primary dark:text-dark-primary mb-6 transition-transform group-hover:scale-110 group-hover:rotate-3">
+                        <span class="material-symbols-outlined">smart_toy</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <h3 class="text-xl font-bold font-headline text-on-surface dark:text-dark-on-surface">Balyse
+                        </h3>
+                        <span
+                            class="px-2 py-0.5 bg-primary/5 dark:bg-dark-primary/10 text-primary dark:text-dark-primary text-[10px] font-bold rounded uppercase tracking-tighter border border-primary/10 dark:border-dark-primary/20">In
+                            Progress</span>
+                    </div>
+                    <p
+                        class="text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed text-sm font-semibold mb-4">
+                        Developing an autonomous AI agent specialized in functional analysis, capable of understanding
+                        business needs in natural language and producing professional deliverables (user stories, BRD,
+                        use cases) aligned with BABOK v3 and Agile/Scrum standards.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Agentic
+                            AI</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Prompt
+                            Engineering</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Next.js</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">TypeScript</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Tailwind
+                            CSS</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Kimi
+                            API (Moonshot AI)</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Supabase
+                            (PostgreSQL)</span>
+                    </div>
+                </div>
+                <!-- Projet 2 (StitchCV) -->
+                <div
+                    class="p-5 bg-surface-container-lowest dark:bg-dark-surface-container rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10 hover:-translate-y-1 hover:shadow-md transition-all group">
+                    <div
+                        class="w-12 h-12 bg-primary-fixed dark:bg-dark-primary-fixed rounded-xl flex items-center justify-center text-primary dark:text-dark-primary mb-6 transition-transform group-hover:scale-110 group-hover:rotate-3">
+                        <span class="material-symbols-outlined">code</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <h3 class="text-xl font-bold font-headline text-on-surface dark:text-dark-on-surface">StitchCV
+                        </h3>
+                    </div>
+                    <p
+                        class="text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed text-sm font-semibold mb-4">
+                        Open-source interactive resume. Designed on Google Stitch and built with HTML5, CSS3,
+                        JavaScript &amp; Tailwind CSS. Modern web portfolio using Google Fonts and Material Symbols, hosted
+                        on GitHub.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Google Stitch</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">HTML5</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">CSS3</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">JavaScript</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Tailwind
+                            CSS</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Google
+                            Fonts</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Material
+                            Symbols</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">GitHub</span>
+                    </div>
+                </div>
+                <!-- Projet 3 (Actufit) -->
+                <div
+                    class="p-5 bg-surface-container-lowest dark:bg-dark-surface-container rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10 hover:-translate-y-1 hover:shadow-md transition-all group">
+                    <div
+                        class="w-12 h-12 bg-primary-fixed dark:bg-dark-primary-fixed rounded-xl flex items-center justify-center text-primary dark:text-dark-primary mb-6 transition-transform group-hover:scale-110 group-hover:rotate-3">
+                        <span class="material-symbols-outlined">fitness_center</span>
+                    </div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <h3 class="text-xl font-bold font-headline text-on-surface dark:text-dark-on-surface">Actufit
+                        </h3>
+                    </div>
+                    <p
+                        class="text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed text-sm font-semibold mb-4">
+                        Founder of Actufit, an Android fitness media app that centralizes diverse information on fitness
+                        topics (wellness, health, bodybuilding, crossfit...).
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Framework
+                            Ionic</span>
+                        <span
+                            class="px-3 py-1.5 bg-primary/5 dark:bg-dark-primary/10 border border-primary/10 dark:border-dark-primary/20 rounded-full text-xs font-semibold text-primary dark:text-dark-primary">Android</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="mb-16">
+            <div class="flex items-center space-x-6 mb-6">
+                <h2 class="font-headline text-3xl font-bold text-primary dark:text-dark-primary">Education
+                </h2>
+                <div class="h-[1px] flex-grow bg-outline-variant/30 dark:bg-white/15"></div>
+            </div>
+
+            <div class="relative">
+                <div
+                    class="absolute left-[11px] top-4 bottom-4 w-[2px] bg-primary-fixed dark:bg-dark-primary-container">
+                </div>
+                <div class="space-y-16">
+                    <!-- 2021 -->
+                    <div class="relative pl-12 group">
+                        <div
+                            class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-primary dark:bg-dark-primary border-4 border-surface dark:border-dark-surface ring-4 ring-primary/10 dark:ring-dark-primary/20 transition-transform group-hover:scale-125 flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-white text-[14px] flex items-center justify-center h-full w-full"
+                                style='font-variation-settings: "FILL" 1;'>verified</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-start md:gap-6">
+                            <span
+                                class="font-headline font-bold text-2xl text-primary/50 dark:text-dark-primary/40 min-w-[120px] mb-2 md:mb-0 whitespace-nowrap">2021</span>
+                            <div
+                                class="p-5 bg-surface-container-lowest dark:bg-dark-surface-container rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10 hover:shadow-md transition-shadow flex-grow">
+                                <h3
+                                    class="text-xl font-bold font-headline text-on-surface dark:text-dark-on-surface mb-2">
+                                    Certification: Becoming a Business Analyst in I.T. - THE FUNDAMENTALS FROM A TO Z</h3>
+                                <p
+                                    class="text-primary dark:text-dark-primary font-semibold text-sm tracking-wide uppercase mb-4">
+                                    E-Learning</p>
+                                <p
+                                    class="text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed text-sm font-semibold">
+                                    Business Analyst Certification (50h): mastery of the IT role, application of the RECCET methodology, and ability to analyze needs to design solutions aligned with business and technology challenges.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2015-2017 -->
+                    <div class="relative pl-12 group">
+                        <div
+                            class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-primary dark:bg-dark-primary border-4 border-surface dark:border-dark-surface ring-4 ring-primary/10 dark:ring-dark-primary/20 transition-transform group-hover:scale-125 flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-white text-[14px] flex items-center justify-center h-full w-full"
+                                style='font-variation-settings: "FILL" 1;'>school</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-start md:gap-6">
+                            <span
+                                class="font-headline font-bold text-2xl text-primary/50 dark:text-dark-primary/40 min-w-[120px] mb-2 md:mb-0 whitespace-nowrap">2015 - 2017</span>
+                            <div
+                                class="p-5 bg-surface-container-lowest dark:bg-dark-surface-container rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10 hover:shadow-md transition-shadow flex-grow">
+                                <h3
+                                    class="text-xl font-bold font-headline text-on-surface dark:text-dark-on-surface mb-2">
+                                    Master's Degree in "IT" and "E-BUSINESS"</h3>
+                                <p
+                                    class="text-primary dark:text-dark-primary font-semibold text-sm tracking-wide uppercase mb-4">
+                                    EDC BUSINESS SCHOOL &amp; EFREITECH Paris La Défense, Villejuif, France</p>
+                                <p
+                                    class="text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed text-sm font-semibold">
+                                    M.Sc. in Business &amp; Digital Strategy Transformation and management of transformation projects in digital environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2014-2015 -->
+                    <div class="relative pl-12 group">
+                        <div
+                            class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-primary dark:bg-dark-primary border-4 border-surface dark:border-dark-surface ring-4 ring-primary/10 dark:ring-dark-primary/20 transition-transform group-hover:scale-125 flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-white text-[14px] flex items-center justify-center h-full w-full"
+                                style='font-variation-settings: "FILL" 1;'>school</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-start md:gap-6">
+                            <span
+                                class="font-headline font-bold text-2xl text-primary/50 dark:text-dark-primary/40 min-w-[120px] mb-2 md:mb-0 whitespace-nowrap">2014 - 2015</span>
+                            <div
+                                class="p-5 bg-surface-container-lowest dark:bg-dark-surface-container rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10 hover:shadow-md transition-shadow flex-grow">
+                                <h3
+                                    class="text-xl font-bold font-headline text-on-surface dark:text-dark-on-surface mb-2">
+                                    Undergraduate Studies (One-Year Certificate/Minor Program "Digital Project Manager")</h3>
+                                <p
+                                    class="text-primary dark:text-dark-primary font-semibold text-sm tracking-wide uppercase mb-4">
+                                    EFREITECH, The Digital Academy, Villejuif, France</p>
+                                <p
+                                    class="text-on-surface-variant dark:text-dark-on-surface-variant leading-relaxed text-sm font-semibold">
+                                    Bachelor's Degree in Digital Project Management: end-to-end digital project management, innovative solution design, and team coordination in agile environments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2011-2013 -->
+                    <div class="relative pl-12 group">
+                        <div
+                            class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-primary dark:bg-dark-primary border-4 border-surface dark:border-dark-surface ring-4 ring-primary/10 dark:ring-dark-primary/20 transition-transform group-hover:scale-125 flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-white text-[14px] flex items-center justify-center h-full w-full"
+                                style='font-variation-settings: "FILL" 1;'>school</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-start md:gap-6">
+                            <span
+                                class="font-headline font-bold text-2xl text-primary/50 dark:text-dark-primary/40 min-w-[120px] mb-2 md:mb-0 whitespace-nowrap">2011 - 2013</span>
+                            <div
+                                class="p-5 bg-surface-container-lowest dark:bg-dark-surface-container rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10 hover:shadow-md transition-shadow flex-grow">
+                                <h3
+                                    class="text-xl font-bold font-headline text-on-surface dark:text-dark-on-surface mb-2">
+                                    Technical College Diploma in "Banking — Retail Markets Option"</h3>
+                                <p
+                                    class="text-primary dark:text-dark-primary font-semibold text-sm tracking-wide uppercase mb-4">
+                                    Lycée Jules Siegfried, Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2009-2011 -->
+                    <div class="relative pl-12 group">
+                        <div
+                            class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-primary dark:bg-dark-primary border-4 border-surface dark:border-dark-surface ring-4 ring-primary/10 dark:ring-dark-primary/20 transition-transform group-hover:scale-125 flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-white text-[14px] flex items-center justify-center h-full w-full"
+                                style='font-variation-settings: "FILL" 1;'>school</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:items-start md:gap-6">
+                            <span
+                                class="font-headline font-bold text-2xl text-primary/50 dark:text-dark-primary/40 min-w-[120px] mb-2 md:mb-0 whitespace-nowrap">2009 - 2011</span>
+                            <div
+                                class="p-5 bg-surface-container-lowest dark:bg-dark-surface-container rounded-xl shadow-sm border border-outline-variant/10 dark:border-white/10 hover:shadow-md transition-shadow flex-grow">
+                                <h3
+                                    class="text-xl font-bold font-headline text-on-surface dark:text-dark-on-surface mb-2">
+                                    Pre-University College Diploma in "Communication and Human Resources Management"</h3>
+                                <p
+                                    class="text-primary dark:text-dark-primary font-semibold text-sm tracking-wide uppercase mb-4">
+                                    Lycée Jean Rose, Meaux, France</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <!-- Interests & Passions -->
+        <section id="interets" class="mb-16">
+            <div class="flex items-center space-x-6 mb-6">
+                <h2 class="font-headline text-3xl font-bold text-primary dark:text-dark-primary">Interests &amp; Passions
+                </h2>
+                <div class="h-[1px] flex-grow bg-outline-variant/30 dark:bg-white/15"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Tech News -->
+                <div
+                    class="p-6 bg-surface-container-lowest dark:bg-dark-surface-container rounded-xl border border-outline-variant/10 dark:border-white/10 hover:-translate-y-1 hover:shadow-md transition-all group">
+                    <div
+                        class="w-10 h-10 bg-primary-fixed dark:bg-dark-primary-fixed rounded-lg flex items-center justify-center text-primary dark:text-dark-primary mb-4 transition-transform group-hover:scale-110 group-hover:rotate-3">
+                        <span class="material-symbols-outlined">campaign</span>
+                    </div>
+                    <h3
+                        class="text-sm font-bold font-headline text-on-surface dark:text-dark-on-surface mb-2 uppercase tracking-wide">
+                        Tech News &amp; Trends</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Android</span>
+                        <span class="tag">iOS</span>
+                        <span class="tag">Mobile Apps</span>
+                        <span class="tag">Tech Innovations</span>
+                        <span class="tag">Tech Enthusiast</span>
+                        <span class="tag">Tech Watch</span>
+                    </div>
+                </div>
+                <!-- TI -->
+                <div
+                    class="p-6 bg-surface-container-lowest dark:bg-dark-surface-container rounded-xl border border-outline-variant/10 dark:border-white/10 hover:-translate-y-1 hover:shadow-md transition-all group">
+                    <div
+                        class="w-10 h-10 bg-primary-fixed dark:bg-dark-primary-fixed rounded-lg flex items-center justify-center text-primary dark:text-dark-primary mb-4 transition-transform group-hover:scale-110 group-hover:rotate-3">
+                        <span class="material-symbols-outlined">menu_book</span>
+                    </div>
+                    <h3
+                        class="text-sm font-bold font-headline text-on-surface dark:text-dark-on-surface mb-2 uppercase tracking-wide">
+                        Continuous IT Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Self-Study</span>
+                        <span class="tag">Udemy</span>
+                        <span class="tag">Certifications</span>
+                    </div>
+                </div>
+                <!-- Wellness -->
+                <div
+                    class="p-6 bg-surface-container-lowest dark:bg-dark-surface-container rounded-xl border border-outline-variant/10 dark:border-white/10 hover:-translate-y-1 hover:shadow-md transition-all group">
+                    <div
+                        class="w-10 h-10 bg-primary-fixed dark:bg-dark-primary-fixed rounded-lg flex items-center justify-center text-primary dark:text-dark-primary mb-4 transition-transform group-hover:scale-110 group-hover:rotate-3">
+                        <span class="material-symbols-outlined">mindfulness</span>
+                    </div>
+                    <h3
+                        class="text-sm font-bold font-headline text-on-surface dark:text-dark-on-surface mb-2 uppercase tracking-wide">
+                        Wellness &amp; Health</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Meditation</span>
+                        <span class="tag">Nutrition</span>
+                        <span class="tag">Physical Fitness</span>
+                        <span class="tag">Psychology</span>
+                        <span class="tag">Personal Development</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Section -->
+    <section
+        class="bg-surface-container-lowest dark:bg-dark-surface-container-low w-full py-16 px-8 border-t border-outline-variant/10 dark:border-white/10 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="flex flex-col items-center text-center mb-10">
+                <h2
+                    class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-primary dark:text-dark-primary mb-4">
+                    Let's Connect
+                </h2>
+                <div class="h-1 w-20 bg-primary dark:bg-dark-primary rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <!-- Download CV Block -->
+                <a href="javascript:window.print()"
+                    class="group flex flex-col items-center p-5 bg-surface-container-lowest dark:bg-dark-surface-container rounded-2xl border border-outline-variant/20 dark:border-white/10 hover:border-primary/50 dark:hover:border-dark-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-primary-fixed dark:bg-dark-primary-fixed rounded-xl flex items-center justify-center text-primary dark:text-dark-primary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">download</span>
+                    </div>
+                    <span class="font-headline font-bold text-on-surface dark:text-dark-on-surface mb-1">Download
+                        CV</span>
+                    <span
+                        class="text-xs text-on-surface-variant dark:text-dark-on-surface-variant uppercase tracking-widest font-bold">PDF
+                        Version</span>
+                </a>    
+                <!-- Email Block -->
+                <a href="mailto:velansolutions@zohomailcloud.ca"
+                    class="group flex flex-col items-center p-5 bg-surface-container-lowest dark:bg-dark-surface-container rounded-2xl border border-outline-variant/20 dark:border-white/10 hover:border-primary/50 dark:hover:border-dark-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-primary-fixed dark:bg-dark-primary-fixed rounded-xl flex items-center justify-center text-primary dark:text-dark-primary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">mail</span>
+                    </div>
+                    <span class="font-headline font-bold text-on-surface dark:text-dark-on-surface mb-1">Email</span>
+                    <span
+                        class="text-xs text-on-surface-variant dark:text-dark-on-surface-variant uppercase tracking-widest font-bold">Contact Me</span>
+                </a>
+                <!-- LinkedIn Block -->
+                <a href="https://www.linkedin.com/in/gnanavelandavy" target="_blank" rel="noopener noreferrer"
+                    class="group flex flex-col items-center p-5 bg-surface-container-lowest dark:bg-dark-surface-container rounded-2xl border border-outline-variant/20 dark:border-white/10 hover:border-primary/50 dark:hover:border-dark-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-primary-fixed dark:bg-dark-primary-fixed rounded-xl flex items-center justify-center text-primary dark:text-dark-primary mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                        </svg>
+                    </div>
+                    <span class="font-headline font-bold text-on-surface dark:text-dark-on-surface mb-1">LinkedIn</span>
+                    <span
+                        class="text-xs text-on-surface-variant dark:text-dark-on-surface-variant uppercase tracking-widest font-bold">Professional
+                        Network</span>
+                </a>
+                <!-- GitHub Block -->
+                <a href="https://github.com/daav-23" target="_blank" rel="noopener noreferrer"
+                    class="group flex flex-col items-center p-5 bg-surface-container-lowest dark:bg-dark-surface-container rounded-2xl border border-outline-variant/20 dark:border-white/10 hover:border-primary/50 dark:hover:border-dark-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div
+                        class="w-14 h-14 bg-primary-fixed dark:bg-dark-primary-fixed rounded-xl flex items-center justify-center text-primary dark:text-dark-primary mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                        </svg>
+                    </div>
+                    <span class="font-headline font-bold text-on-surface dark:text-dark-on-surface mb-1">GitHub</span>
+                    <span
+                        class="text-xs text-on-surface-variant dark:text-dark-on-surface-variant uppercase tracking-widest font-bold">My Side Projects</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal"
+        class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="contact-modal-overlay"></div>
+        <div class="relative bg-surface-container-lowest dark:bg-dark-surface-container rounded-2xl shadow-2xl w-full max-w-md mx-4 transform scale-95 transition-transform duration-300"
+            id="contact-modal-content">
+            <div class="p-5">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="font-headline text-2xl font-bold text-primary dark:text-dark-primary">Contact</h2>
+                    <button id="close-contact-modal"
+                        class="p-2 rounded-lg hover:bg-surface-container-low dark:hover:bg-dark-surface-container-low text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-lowest dark:bg-dark-surface-container-low border border-outline-variant/10 dark:border-white/10">
+                        <div class="w-10 h-10 rounded-lg bg-primary-fixed dark:bg-dark-primary-container flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary dark:text-dark-primary">location_on</span>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant dark:text-dark-on-surface-variant mb-1">
+                                Location</p>
+                            <a href="https://maps.google.com/?q=Montréal,+Québec,+Canada" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-on-surface dark:text-dark-on-surface hover:text-primary dark:hover:text-dark-primary transition-colors cursor-pointer">Montreal, QC</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-surface-container-lowest dark:bg-dark-surface-container-low border border-outline-variant/10 dark:border-white/10">
+                        <div class="w-10 h-10 rounded-lg bg-primary-fixed dark:bg-dark-primary-container flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary dark:text-dark-primary">mail</span>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant dark:text-dark-on-surface-variant mb-1">
+                                Email</p>
+                            <a href="mailto:velansolutions@zohomailcloud.ca" class="text-sm font-semibold text-on-surface dark:text-dark-on-surface hover:text-primary dark:hover:text-dark-primary transition-colors">velansolutions@zohomailcloud.ca</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+            (function () {
+                const openBtn = document.getElementById('open-contact-modal');
+                const modal = document.getElementById('contact-modal');
+                const overlay = document.getElementById('contact-modal-overlay');
+                const closeBtn = document.getElementById('close-contact-modal');
+                const content = document.getElementById('contact-modal-content');
+
+                function openModal() {
+                    modal.classList.remove('opacity-0', 'pointer-events-none');
+                    modal.classList.add('opacity-100', 'pointer-events-auto');
+                    content.classList.remove('scale-95');
+                    content.classList.add('scale-100');
+                }
+                function closeModal() {
+                    modal.classList.add('opacity-0', 'pointer-events-none');
+                    modal.classList.remove('opacity-100', 'pointer-events-auto');
+                    content.classList.add('scale-95');
+                    content.classList.remove('scale-100');
+                }
+                if (openBtn) openBtn.addEventListener('click', openModal);
+                if (closeBtn) closeBtn.addEventListener('click', closeModal);
+                if (overlay) overlay.addEventListener('click', closeModal);
+                document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
+            })();
+    </script>
+
+    <script>
+        (function () {
+            const toggle = document.getElementById('dark-mode-toggle');
+            const html = document.documentElement;
+            const icon = toggle.querySelector('.material-symbols-outlined');
+
+            function getPreferredTheme() {
+                try {
+                    const saved = localStorage.getItem('theme');
+                    if (saved) return saved;
+                } catch (e) {}
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            function applyTheme(theme) {
+                if (theme === 'dark') {
+                    html.classList.remove('light');
+                    html.classList.add('dark');
+                    icon.textContent = 'dark_mode';
+                } else {
+                    html.classList.remove('dark');
+                    html.classList.add('light');
+                    icon.textContent = 'light_mode';
+                }
+            }
+
+            applyTheme(getPreferredTheme());
+
+            toggle.addEventListener('click', function () {
+                const isDark = html.classList.contains('dark');
+                const newTheme = isDark ? 'light' : 'dark';
+                applyTheme(newTheme);
+                try {
+                    localStorage.setItem('theme', newTheme);
+                } catch (e) {}
+            });
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+                try {
+                    if (!localStorage.getItem('theme')) {
+                        applyTheme(e.matches ? 'dark' : 'light');
+                    }
+                } catch (e) {}
+            });
+        })();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const icons = [
+                document.getElementById('dark-mode-toggle'),
+                document.getElementById('open-contact-modal'),
+                document.getElementById('translate-toggle'),
+                document.getElementById('linkedin-link'),
+                document.getElementById('github-link')
+            ].filter(Boolean);
+
+            icons.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    this.classList.remove('icon-animating');
+                    void this.offsetWidth;
+                    this.classList.add('icon-animating');
+                });
+            });
+        });
+    </script>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-[100] flex flex-col items-end pointer-events-none">
+        <div id="chatbot-window"
+            class="pointer-events-auto hidden w-[350px] max-w-[calc(100vw-3rem)] bg-surface-container-lowest dark:bg-dark-surface-card rounded-2xl shadow-2xl border border-outline-variant/20 dark:border-white/10 mb-4 overflow-hidden flex flex-col transition-all transform origin-bottom-right duration-300 scale-95 opacity-0">
+            <div class="bg-primary dark:bg-dark-primary p-4 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-sm text-on-primary dark:text-dark-on-primary"
+                            style="font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;">smart_toy</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline font-bold text-sm text-on-primary dark:text-dark-on-primary">Davy's
+                            Assistant</h3>
+                        <p class="text-[10px] text-on-primary/80 dark:text-dark-on-primary/80 flex items-center gap-1">
+                            <span class="inline-block w-1.5 h-1.5 rounded-full bg-success"></span> Online
+                        </p>
+                    </div>
+                </div>
+                <button id="chatbot-close"
+                    class="hover:bg-white/20 p-1 rounded-lg transition-colors flex items-center justify-center">
+                    <span
+                        class="material-symbols-outlined text-sm text-on-primary dark:text-dark-on-primary">close</span>
+                </button>
+            </div>
+            <div id="chatbot-messages"
+                class="p-4 h-[300px] overflow-y-auto flex flex-col gap-3 bg-surface-container-lowest dark:bg-[#1b1b1f] text-sm scroll-smooth">
+                <div class="flex gap-2 w-full">
+                    <div
+                        class="w-6 h-6 rounded-full bg-primary/10 dark:bg-dark-primary/10 flex-shrink-0 flex items-center justify-center mt-1">
+                        <span
+                            class="material-symbols-outlined text-[12px] text-on-surface-variant dark:text-dark-on-surface-variant">smart_toy</span>
+                    </div>
+                    <div
+                        class="bg-surface-container-low dark:bg-dark-surface-container-low p-3 rounded-2xl rounded-tl-sm text-on-surface dark:text-dark-on-surface max-w-[85%] border border-outline-variant/10 dark:border-white/5">
+                        Hello! I'm Davy's virtual assistant. How can I help you?
+                    </div>
+                </div>
+            </div>
+            <div id="chatbot-options"
+                class="p-4 border-t border-outline-variant/10 dark:border-white/10 bg-surface-container-lowest dark:bg-dark-surface-card flex flex-wrap gap-2">
+            </div>
+        </div>
+        <button id="chatbot-toggle"
+            class="pointer-events-auto w-14 h-14 bg-primary dark:bg-dark-primary text-on-primary dark:text-dark-on-primary rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center relative aspect-square flex-shrink-0">
+            <span class="material-symbols-outlined text-3xl">chat</span>
+            <span
+                class="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full border-2 border-white dark:border-[#1b1b1f]"></span>
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const chatbotToggle = document.getElementById('chatbot-toggle');
+            const chatbotWindow = document.getElementById('chatbot-window');
+            const chatbotClose = document.getElementById('chatbot-close');
+            const chatbotMessages = document.getElementById('chatbot-messages');
+            const chatbotOptions = document.getElementById('chatbot-options');
+
+            let isChatOpen = false;
+
+            const qaData = {
+                "Currently on a contract?": "No, my last contract at Desjardins has ended. I am actively seeking new professional challenges.",
+                "Open to opportunities?": "Yes, I am immediately available to evaluate new opportunities.",
+                "Remote work?": "Yes, I prefer a hybrid or 100% remote format, but I remain open to occasional on-site presence as needed.",
+                "Contract type?": "I work exclusively on a contractual basis (incorporated freelance).",
+                "What is your daily rate?": "To discuss my daily rate, feel free to contact me directly by email at <b>velansolutions@zohomailcloud.ca</b> or by phone at <b>581-317-1068</b>.",
+                "Available for an interview?": "Absolutely! You can book a slot directly in my calendar: <a href='https://calendar.app.google/wZVkVTiUqiafRxLZ8' target='_blank' rel='noopener noreferrer' class='inline-flex items-center gap-1.5 mt-2 px-4 py-2 bg-primary text-on-primary rounded-full text-xs font-bold no-underline tracking-widest hover:bg-primary/90 transition-colors'><span class='material-symbols-outlined text-lg'>calendar_month</span> Book a time slot</a>"
+            };
+
+            const toggleChat = () => {
+                isChatOpen = !isChatOpen;
+                if (isChatOpen) {
+                    chatbotWindow.classList.remove('hidden');
+                    const dot = chatbotToggle.querySelector('.bg-red-500');
+                    if (dot) dot.classList.add('hidden');
+                    setTimeout(() => {
+                        chatbotWindow.classList.remove('scale-95', 'opacity-0');
+                        chatbotWindow.classList.add('scale-100', 'opacity-100');
+                    }, 10);
+                } else {
+                    chatbotWindow.classList.remove('scale-100', 'opacity-100');
+                    chatbotWindow.classList.add('scale-95', 'opacity-0');
+                    setTimeout(() => { chatbotWindow.classList.add('hidden'); }, 300);
+                }
+            };
+
+            chatbotToggle.addEventListener('click', toggleChat);
+            chatbotClose.addEventListener('click', toggleChat);
+
+            const addMessage = (text, isUser = false) => {
+                const msgDiv = document.createElement('div');
+                msgDiv.className = `flex gap-2 w-full ${isUser ? 'justify-end' : ''}`;
+                let avatar = '';
+                if (!isUser) {
+                    avatar = `<div class="w-6 h-6 rounded-full bg-primary/10 dark:bg-dark-primary/10 flex-shrink-0 flex items-center justify-center mt-1">
+                                <span class="material-symbols-outlined text-[12px] text-on-surface-variant dark:text-dark-on-surface-variant">smart_toy</span>
+                              </div>`;
+                }
+                msgDiv.innerHTML = `
+                    ${!isUser ? avatar : ''}
+                    <div class="${isUser ? 'bg-primary dark:bg-dark-primary text-on-primary dark:text-dark-on-primary rounded-tr-sm' : 'bg-surface-container-low dark:bg-dark-surface-container-low text-on-surface dark:text-dark-on-surface rounded-tl-sm border border-outline-variant/10 dark:border-white/5'} p-3 rounded-2xl max-w-[85%] text-sm">
+                        ${text}
+                    </div>
+                `;
+                chatbotMessages.appendChild(msgDiv);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            };
+
+            const restoreOptions = () => {
+                chatbotOptions.innerHTML = '';
+                Object.keys(qaData).forEach(question => {
+                    const btn = document.createElement('button');
+                    btn.className = "px-3 py-1.5 bg-surface-container-high dark:bg-dark-surface-container-high hover:bg-primary/10 dark:hover:bg-dark-primary/20 text-primary dark:text-dark-primary text-[11px] font-semibold rounded-full border border-primary/20 transition-colors text-left";
+                    btn.innerText = question;
+                    btn.onclick = () => {
+                        chatbotOptions.innerHTML = '';
+                        addMessage(question, true);
+                        const typingId = 'typing-' + Date.now();
+                        const typingDiv = document.createElement('div');
+                        typingDiv.id = typingId;
+                        typingDiv.className = `flex gap-2 w-full`;
+                        typingDiv.innerHTML = `
+                            <div class="w-6 h-6 rounded-full bg-primary/10 dark:bg-dark-primary/10 flex-shrink-0 flex items-center justify-center mt-1">
+                                <span class="material-symbols-outlined text-[12px] text-on-surface-variant dark:text-dark-on-surface-variant">smart_toy</span>
+                            </div>
+                            <div class="bg-surface-container-low dark:bg-dark-surface-container-low p-3 rounded-2xl rounded-tl-sm flex items-center gap-1 border border-outline-variant/10 dark:border-white/5">
+                                <div class="w-1.5 h-1.5 bg-on-surface-variant/50 rounded-full animate-bounce" style="animation-delay: 0s"></div>
+                                <div class="w-1.5 h-1.5 bg-on-surface-variant/50 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                                <div class="w-1.5 h-1.5 bg-on-surface-variant/50 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+                            </div>
+                        `;
+                        chatbotMessages.appendChild(typingDiv);
+                        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+                        setTimeout(() => {
+                            document.getElementById(typingId).remove();
+                            addMessage(qaData[question]);
+                            restoreOptions();
+                        }, 600);
+                    };
+                    chatbotOptions.appendChild(btn);
+                });
+            };
+            restoreOptions();
+        });
+    </script>
+</body>
+
+</html>
