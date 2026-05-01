@@ -13,7 +13,7 @@
 
 **StitchCV** is a modern web portfolio featuring a **Mobile-First** approach and a polished visual identity based on **Material Design 3** principles.
 
-- ✅ Fully responsive design (mobile, tablet, desktop)
+- ✅ Fully responsive design (mobile, tablet, desktop) with hamburger menu
 - ✅ Dark / light mode toggle with persistence
 - ✅ Bilingual: French & English
 - ✅ Print-optimized (`@media print` dedicated styles)
@@ -109,7 +109,7 @@ The chatbot and its responses are located in the `chatbotData` JavaScript object
 Deployed via **GitHub Pages**:
 
 ```
-https://daav-23.github.io/StitchCV/
+https://cv.gnanavelan.me/
 ```
 
 ## Design System
