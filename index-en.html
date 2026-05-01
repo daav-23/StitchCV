@@ -285,6 +285,35 @@
             color: #bdc2ff;
             border-color: rgba(189, 194, 255, 0.2);
         }
+    /* Mobile Hamburger Menu */
+    #mobile-menu-panel {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    #mobile-menu-panel.open {
+        transform: translateX(0);
+    }
+    #mobile-menu-overlay {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+    }
+    #mobile-menu-overlay.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .hamburger-line {
+        transition: all 0.3s ease-in-out;
+    }
+    #mobile-menu-btn.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #mobile-menu-btn.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    #mobile-menu-btn.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
     </style>
 </head>
 
@@ -298,7 +327,7 @@
                 <div class="text-xl font-bold tracking-tighter text-primary dark:text-dark-primary font-headline z-10">
                     DAVY GNANAVELAN
                 </div>
-                <div class="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none">
+                <div class="hidden lg:flex absolute inset-0 items-center justify-center pointer-events-none">
                     <div class="flex items-center space-x-8 pointer-events-auto">
                         <a class="text-sm font-bold font-headline tracking-tight text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors duration-300"
                             href="#profil">Profile</a>
@@ -308,9 +337,10 @@
                             href="#education">Education</a>
                     </div>
                 </div>
-                <div class="flex items-center space-x-4 z-10">
+                <!-- Desktop icons -->
+                <div class="hidden lg:flex items-center space-x-4 z-10">
                     <button aria-label="Toggle dark mode"
-                        class="p-2 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors rounded-lg hover:bg-surface-container-low dark:hover:bg-dark-surface-container-low flex items-center justify-center"
+                        class="dark-mode-toggle p-2 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors rounded-lg hover:bg-surface-container-low dark:hover:bg-dark-surface-container-low flex items-center justify-center"
                         id="dark-mode-toggle"><span
                             class="material-symbols-outlined align-middle">light_mode</span></button>
                     <!-- Translation Button -->
@@ -340,14 +370,65 @@
                         </svg>
                     </a>
                     <button aria-label="Contact"
-                        class="p-2 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors rounded-lg hover:bg-surface-container-low dark:hover:bg-dark-surface-container-low flex items-center justify-center"
+                        class="open-contact-modal p-2 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors rounded-lg hover:bg-surface-container-low dark:hover:bg-dark-surface-container-low flex items-center justify-center"
                         id="open-contact-modal">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor" class="align-middle"><path d="M80-120q-33 0-56.5-23.5T0-200v-560q0-33 23.5-56.5T80-840h800q33 0 56.5 23.5T960-760v560q0 33-23.5 56.5T880-120H80Zm556-80h244v-560H80v560h4q42-75 116-117.5T360-360q86 0 160 42.5T636-200ZM445-435q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm315 195 80-80-60-80h-66q-6-18-10-38.5t-4-41.5q0-21 4-40.5t10-39.5h66l60-80-80-80q-54 42-87 106.5T640-480q0 69 33 133.5T760-240Zm-578 40h356q-34-38-80.5-59T360-280q-51 0-97 21t-81 59Zm149.5-291.5Q320-503 320-520t11.5-28.5Q343-560 360-560t28.5 11.5Q400-537 400-520t-11.5 28.5Q377-480 360-480t-28.5-11.5ZM480-480Z"/></svg>
+                    </button>
+                </div>
+
+                <!-- Mobile right side -->
+                <div class="flex items-center space-x-2 z-10 lg:hidden">
+                    <button aria-label="Toggle dark mode"
+                        class="dark-mode-toggle p-2 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors rounded-lg hover:bg-surface-container-low dark:hover:bg-dark-surface-container-low flex items-center justify-center">
+                        <span class="material-symbols-outlined align-middle">light_mode</span></button>
+                    <button aria-label="Menu" id="mobile-menu-btn"
+                        class="p-2 flex flex-col items-center justify-center space-y-1 w-10 h-10 rounded-lg hover:bg-surface-container-low dark:hover:bg-dark-surface-container-low">
+                        <span class="hamburger-line w-5 h-0.5 bg-on-surface dark:bg-dark-on-surface block rounded-full"></span>
+                        <span class="hamburger-line w-5 h-0.5 bg-on-surface dark:bg-dark-on-surface block rounded-full"></span>
+                        <span class="hamburger-line w-5 h-0.5 bg-on-surface dark:bg-dark-on-surface block rounded-full"></span>
                     </button>
                 </div>
             </div>
         </div>
         </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden" onclick="closeMobileMenu()"></div>
+    <div id="mobile-menu-panel" class="fixed top-0 right-0 h-full w-72 z-50 bg-surface-container-lowest dark:bg-dark-surface-container shadow-2xl lg:hidden flex flex-col">
+        <div class="flex items-center justify-between p-6 border-b border-outline-variant/10 dark:border-white/10">
+            <span class="font-headline font-bold text-lg text-primary dark:text-dark-primary">Menu</span>
+            <button onclick="closeMobileMenu()" class="p-2 rounded-lg hover:bg-surface-container-low dark:hover:bg-dark-surface-container-low text-on-surface-variant dark:text-dark-on-surface-variant">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-6 space-y-6">
+            <div class="space-y-4">
+                <a href="#profil" onclick="closeMobileMenu()" class="block text-lg font-bold text-on-surface dark:text-dark-on-surface hover:text-primary dark:hover:text-dark-primary transition-colors">Profile</a>
+                <a href="#experience" onclick="closeMobileMenu()" class="block text-lg font-bold text-on-surface dark:text-dark-on-surface hover:text-primary dark:hover:text-dark-primary transition-colors">Experience</a>
+                <a href="#education" onclick="closeMobileMenu()" class="block text-lg font-bold text-on-surface dark:text-dark-on-surface hover:text-primary dark:hover:text-dark-primary transition-colors">Education</a>
+            </div>
+            <div class="h-px bg-outline-variant/20 dark:bg-white/10"></div>
+            <div class="space-y-4">
+                <a href="https://www.linkedin.com/in/gnanavelandavy" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/daav-23" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                    <span>GitHub</span>
+                </a>
+                <button class="open-contact-modal flex items-center space-x-3 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors w-full text-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M80-120q-33 0-56.5-23.5T0-200v-560q0-33 23.5-56.5T80-840h800q33 0 56.5 23.5T960-760v560q0 33-23.5 56.5T880-120H80Zm556-80h244v-560H80v560h4q42-75 116-117.5T360-360q86 0 160 42.5T636-200ZM445-435q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm315 195 80-80-60-80h-66q-6-18-10-38.5t-4-41.5q0-21 4-40.5t10-39.5h66l60-80-80-80q-54 42-87 106.5T640-480q0 69 33 133.5T760-240Zm-578 40h356q-34-38-80.5-59T360-280q-51 0-97 21t-81 59Zm149.5-291.5Q320-503 320-520t11.5-28.5Q343-560 360-560t28.5 11.5Q400-537 400-520t-11.5 28.5Q377-480 360-480t-28.5-11.5ZM480-480Z"/></svg>
+                    <span>Contact</span>
+                </button>
+                <a href="index.html" class="flex items-center space-x-3 text-on-surface-variant dark:text-dark-on-surface-variant hover:text-primary dark:hover:text-dark-primary transition-colors">
+                    <span class="material-symbols-outlined">translate</span>
+                    <span>Version Française</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <main class="pt-24 pb-20 max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <!-- Hero Section -->
         <section id="profil" class="relative min-h-0 flex flex-col justify-center mb-10 parallax-section">
@@ -364,7 +445,7 @@
                     </div>
                 </div>
                 <h1
-                    class="font-headline text-6xl md:text-7xl font-extrabold tracking-tighter text-primary dark:text-dark-primary leading-tight max-w-4xl">
+                    class="font-headline text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tighter text-primary dark:text-dark-primary leading-tight max-w-4xl">
                     Business & <span class="relative inline-block">
                         <span class="relative z-10 text-on-surface dark:text-dark-on-surface">Functional Analyst</span>
                         <span
@@ -1858,7 +1939,7 @@
                     content.classList.add('scale-95');
                     content.classList.remove('scale-100');
                 }
-                if (openBtn) openBtn.addEventListener('click', openModal);
+                document.querySelectorAll('#open-contact-modal, .open-contact-modal').forEach(btn => btn.addEventListener('click', openModal));
                 if (closeBtn) closeBtn.addEventListener('click', closeModal);
                 if (overlay) overlay.addEventListener('click', closeModal);
                 document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
@@ -1883,23 +1964,25 @@
                 if (theme === 'dark') {
                     html.classList.remove('light');
                     html.classList.add('dark');
-                    icon.textContent = 'dark_mode';
+                    document.querySelectorAll('.dark-mode-toggle .material-symbols-outlined').forEach(ic => ic.textContent = 'dark_mode');
                 } else {
                     html.classList.remove('dark');
                     html.classList.add('light');
-                    icon.textContent = 'light_mode';
+                    document.querySelectorAll('.dark-mode-toggle .material-symbols-outlined').forEach(ic => ic.textContent = 'light_mode');
                 }
             }
 
             applyTheme(getPreferredTheme());
 
-            toggle.addEventListener('click', function () {
-                const isDark = html.classList.contains('dark');
-                const newTheme = isDark ? 'light' : 'dark';
-                applyTheme(newTheme);
-                try {
-                    localStorage.setItem('theme', newTheme);
-                } catch (e) {}
+            document.querySelectorAll('.dark-mode-toggle').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const isDark = html.classList.contains('dark');
+                    const newTheme = isDark ? 'light' : 'dark';
+                    applyTheme(newTheme);
+                    try {
+                        localStorage.setItem('theme', newTheme);
+                    } catch (e) {}
+                });
             });
 
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
@@ -1913,7 +1996,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             const icons = [
-                document.getElementById('dark-mode-toggle'),
+                ...document.querySelectorAll('.dark-mode-toggle'),
                 document.getElementById('open-contact-modal'),
                 document.getElementById('translate-toggle'),
                 document.getElementById('linkedin-link'),
@@ -2075,6 +2158,38 @@
             restoreOptions();
         });
     </script>
+    <script>
+        (function () {
+            function openMobileMenu() {
+                document.getElementById('mobile-menu-overlay').classList.add('open');
+                document.getElementById('mobile-menu-panel').classList.add('open');
+                document.getElementById('mobile-menu-btn').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMobileMenu() {
+                document.getElementById('mobile-menu-overlay').classList.remove('open');
+                document.getElementById('mobile-menu-panel').classList.remove('open');
+                document.getElementById('mobile-menu-btn').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            window.openMobileMenu = openMobileMenu;
+            window.closeMobileMenu = closeMobileMenu;
+            const btn = document.getElementById('mobile-menu-btn');
+            if (btn) {
+                btn.addEventListener('click', function () {
+                    if (this.classList.contains('active')) {
+                        closeMobileMenu();
+                    } else {
+                        openMobileMenu();
+                    }
+                });
+            }
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeMobileMenu();
+            });
+        })();
+    </script>
+
 </body>
 
 </html>
