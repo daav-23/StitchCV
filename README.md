@@ -104,16 +104,14 @@ The chatbot and its responses are located in the `chatbotData` JavaScript object
 
 ## PDF Download
 
-The "Download CV" buttons in the HTML expect PDF files at the root of the project. **Personal PDFs are not included in this repository.**
+Personal CV PDFs are stored on a separate **`pdf`** branch to keep the main repository clean. The download buttons link directly to these files via `raw.githubusercontent.com`.
 
-To enable the download buttons, add your own PDFs with the following filenames:
+| Language | Branch | Filename |
+|----------|--------|----------|
+| French | `pdf` | `CV_Davy_Gnanavelan_Pigiste.pdf` |
+| English | `pdf` | `CV_Davy_Gnanavelan_Freelancer_English.pdf` |
 
-| Language | Expected filename |
-|----------|-------------------|
-| French | `CV_Davy_Gnanavelan_Pigiste.pdf` |
-| English | `CV_Davy_Gnanavelan_Freelancer_English.pdf` |
-
-> **Tip:** Update the `href` attributes in `index.html` and `index-en.html` to match your own PDF filenames.
+> **Tip:** To use this template with your own CVs, create a `pdf` branch in your fork and upload your PDFs there, then update the `href` attributes in `index.html` and `index-en.html`.
 
 ## Deployment
 
