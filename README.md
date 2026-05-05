@@ -52,8 +52,6 @@ Then open: http://localhost:8000
 StitchCV/
 ├── index.html              # French version
 ├── index-en.html           # English version
-├── CV_Davy_Gnanavelan_Pigiste.pdf           # French PDF version
-├── CV_Davy_Gnanavelan_Freelancer_English.pdf  # English PDF version
 ├── logo_entreprise/        # Company logos
 │   ├── banquenationale.png
 │   ├── bforbank.png
@@ -103,6 +101,19 @@ The chatbot and its responses are located in the `chatbotData` JavaScript object
 | **Print Styles** | Hides nav/chatbot/modal, forces white background, A4 layout |
 | **Chatbot** | Fixed widget with FAQ, typing animation, calendar button |
 | **Accessibility** | Material Symbols icons, proper contrast, keyboard navigation |
+
+## PDF Download
+
+The "Download CV" buttons in the HTML expect PDF files at the root of the project. **Personal PDFs are not included in this repository.**
+
+To enable the download buttons, add your own PDFs with the following filenames:
+
+| Language | Expected filename |
+|----------|-------------------|
+| French | `CV_Davy_Gnanavelan_Pigiste.pdf` |
+| English | `CV_Davy_Gnanavelan_Freelancer_English.pdf` |
+
+> **Tip:** Update the `href` attributes in `index.html` and `index-en.html` to match your own PDF filenames.
 
 ## Deployment
 
